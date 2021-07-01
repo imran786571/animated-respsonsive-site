@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=David+Libre&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-color {
+    background-color: #252839 !important;
+}
+.brand_div {
+    position: relative;
+    /* font-size: 1vw; */
+    /* font-family: 'Poppins', sans-serif !important; */
+    color: #252839 !important;
+    -webkit-text-stroke: 0.2vw #383d52 !important;
+    -moz-text-stroke: 0.2vw #383d52 !important;
+    text-transform: uppercase;
+}
+
+.brand_div .lg-brand::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52 !important;
+    border-right: 2px solid #01fe87;
+    overflow: hidden !important;
+    animation:  animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 90%;
+    }
+}
+
+
+.bg-image {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bodyImage.jpeg');
+    /* background: linear-gradient(to right,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)), url('../images/bodyImage.jpeg'); */
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+    width: 100%;
+    height: 657px;
+}
+
+
+/* html {
+    font-size: 62.5%;
+} */
+
+.typer_div {
+    height: calc(100vh - 40vh);
+}
+
+.typer_div p {
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    color: #fff;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.typer_div h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    position: relative;
+    padding-bottom: 2rem;
+    transition: 0.3s all ease;
+}
+
+.typer_div span {
+    font-family: 'Josefin Sans' sans-serif;
+}
+
+.animateWord div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 5.625rem; /* height set */
+    padding-top: .625rem;
+    margin-top: -.625rem;
+}
+
+.animateWord div li {
+    font-weight: bold;
+    /* padding: 0 .60rem; */
+    height: 5.7rem;
+    /* margin-bottom: 1.6rem; */
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #01fe87;
+}
+
+.typer_div .bt {
+    background-color: white ;
+    z-index: 1;
+}
+.bt a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1.5rem 2.5rem;
+    position: relative;
+    color: #fff;
+    transition: all 0.3s linear;
+    font-family: 'Josefin', sans-serif;
+    font-weight: bold;
+}
+
+.bt a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+.bt a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a3cb38;
+    top: -0.1rem;
+    left: -0.1rem;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transform-origin: top;
+    transition: all 0.3s linear;
+    border-radius: 1rem;
+    
+}
+
+.bt a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #12cbc4;
+    top: 0.2rem;
+    left: 0.2rem;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transform-origin: bottom;
+    transition: all 0.3s linear;
+    border-radius: 1rem;
+}
+
+.bt a:hover::before {
+    top: 0;
+    left: 0;
+    transform: perspective(100rem) rotateX(75deg);
+}
+
+.bt a:hover::after {
+    top: 0;
+    left: 0;
+    transform: perspective(100rem) rotateX(-75deg);
+}
+
+
+.flip {
+    -webkit-animation: flip4 10s cubic-bezier(0.23,1,0.32,1.2) infinite;
+    animation: flip4 10s cubic-bezier(0.23,1,0.32,1.2) infinite;
+}
+
+@-webkit-keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }   
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+
+}
+
+
+@keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+}
+
+
+/* our services start here  */
+
+/* .ourserivces {
+    background-image: url('../images/serviceDIv.jpeg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+} */
+
+.card-body {
+    display: grid;
+    place-content: center;
+}
+
+.card-border-none {
+    border: none !important;
+}
+
+.image-seting {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    background-color: #252839;
+    color: #01fe87;
+}
+/* our services end here  */
+
+.image-seting i:hover {
+    filter: drop-shadow(1rem 0.70rem .2rem blue);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio {    
+    height: auto;
+    width: 100%;
+    padding: 100px 0px 50px;
+}
+
+
+
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 433.98px) {
+
+    .typer_div p {
+        font-size: 2.5rem;
+    }
+    
+    .typer_div h2 {
+        font-size: 2.2rem;
+    }
+
+    .brand_div {
+        -webkit-text-stroke: 0.4vw #383d52 !important;
+        -moz-text-stroke: 0.4vw #383d52 !important;
+    }
+}
+
+@media (max-width: 393.98px) {
+
+    .typer_div p {
+        font-size: 2.3rem;
+    }
+    
+    .typer_div h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 370.98px) {
+
+    .typer_div p {
+        font-size: 2rem;
+    }
+    
+    .typer_div h2 {
+        font-size: 1.5rem;
+    }
+
+    .brand_div {
+        -webkit-text-stroke: 0.4vw #383d52 !important;
+        -moz-text-stroke: 0.4vw #383d52 !important;
+    }
+}
+
+
